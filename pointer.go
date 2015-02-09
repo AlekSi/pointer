@@ -1,5 +1,9 @@
 package pointer
 
+import (
+	"time"
+)
+
 func ToString(s string) *string {
 	return &s
 }
@@ -49,5 +53,9 @@ func ToFloat32(f float32) *float32 {
 }
 
 func ToFloat64(f float64) *float64 {
+	return &f
+}
+
+func ToTime(f time.Time) *time.Time {
 	return &f
 }
