@@ -56,6 +56,10 @@ func ToFloat64(f float64) *float64 {
 	return &f
 }
 
+func ToBool(b bool) *bool {
+	return &b
+}
+
 func ToTime(f time.Time) *time.Time {
 	return &f
 }
