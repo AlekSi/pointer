@@ -63,3 +63,27 @@ func ToBool(b bool) *bool {
 func ToTime(f time.Time) *time.Time {
 	return &f
 }
+
+func ToByte(b byte) *byte {
+	return &b
+}
+
+func ToComplex128(c complex128) *complex128 {
+	return &c
+}
+
+func ToComplex64(c complex64) *complex64 {
+	return &c
+}
+
+func ToError(e error) *error {
+	return &e
+}
+
+func ToRune(r rune) *rune {
+	return &r
+}
+
+func ToUintptr(u uintptr) *uintptr {
+	return &u
+}
