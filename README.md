@@ -1,5 +1,7 @@
-pointer
-=======
+# pointer[![GoDoc](https://godoc.org/github.com/AlekSi/pointer?status.svg)](https://godoc.org/github.com/AlekSi/pointer) [![Build Status](https://travis-ci.org/AlekSi/pointer.svg)](https://travis-ci.org/AlekSi/pointer)
+
+[Documentation](http://godoc.org/github.com/AlekSi/pointer).
+
 
 ```go
 package motivationalexample
