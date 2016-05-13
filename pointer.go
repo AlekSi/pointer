@@ -1,5 +1,5 @@
 // Package pointer provides helpers to get pointers to values of build-in types.
-package pointer
+package pointer // import "github.com/AlekSi/pointer"
 
 import (
 	"time"

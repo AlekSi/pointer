@@ -2,7 +2,11 @@
 
 Go package pointer provides helpers to get pointers to values of build-in types.
 
-[Documentation](http://godoc.org/github.com/AlekSi/pointer).
+```
+go get github.com/AlekSi/pointer
+```
+
+API is stable. [Documentation](http://godoc.org/github.com/AlekSi/pointer).
 
 
 ```go
