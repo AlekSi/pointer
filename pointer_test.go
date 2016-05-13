@@ -164,15 +164,17 @@ func Example() {
 		Name    *string
 		Comment *string
 		Value   *int64
+		Time    *time.Time
 	}
 
 	b, _ := json.Marshal(&Stuff{
-		Name:    ToString(defaultName), // can't say &defaultName
-		Comment: ToString("not yet"),   // can't say &"not yet"
-		Value:   ToInt64(42),           // can't say &42 or &int64(42)
+		Name:    ToString(defaultName),                                   // can't say &defaultName
+		Comment: ToString("not yet"),                                     // can't say &"not yet"
+		Value:   ToInt64(42),                                             // can't say &42 or &int64(42)
+		Time:    ToTime(time.Date(2014, 6, 25, 12, 24, 40, 0, time.UTC)), // can't say &time.Date(…)
 	})
 
 	fmt.Printf("%s", b)
 
-	// Output: {"Name":"some name","Comment":"not yet","Value":42}
+	// Output: {"Name":"some name","Comment":"not yet","Value":42,"Time":"2014-06-25T12:24:40Z"}
 }

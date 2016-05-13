@@ -1,3 +1,4 @@
+// Package pointer provides helpers to get pointers to values of build-in types.
 package pointer
 
 import (
