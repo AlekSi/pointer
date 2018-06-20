@@ -35,6 +35,13 @@ func TestComplex64(t *testing.T) {
 	}
 }
 
+func TestDuration(t *testing.T) {
+	var x time.Duration
+	if *ToDuration(x) != x {
+		t.Fail()
+	}
+}
+
 func TestError(t *testing.T) {
 	var x error
 	if *ToError(x) != x {
