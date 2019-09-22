@@ -532,7 +532,7 @@ func TestTime(t *testing.T) {
 		t.Errorf("GetTime(%v)", nil)
 	}
 
-	x = time.Date(2019, 9, 22, 7, 34, 0, 0, time.UTC)
+	x = time.Date(2014, 6, 25, 12, 24, 40, 0, time.UTC)
 	if *ToTime(x) != x {
 		t.Errorf("*ToTime(%v)", x)
 	}
