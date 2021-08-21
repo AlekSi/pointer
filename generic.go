@@ -4,6 +4,21 @@ func To[T any](t T) *T {
 	return &t
 }
 
+func ToOrNil[T comparable](t T) *T {
+	if z, ok := interface{}(t).(interface{ IsZero() bool }); ok {
+		if z.IsZero() {
+			return nil
+		}
+		return &t
+	}
+
+	var zero T
+	if t == zero {
+		return nil
+	}
+	return &t
+}
+
 func Get[T any](t *T) T {
 	if t == nil {
 		var zero T
@@ -11,5 +26,3 @@ func Get[T any](t *T) T {
 	}
 	return *t
 }
-
-// No `func ToOrNil[T any](t T) *T` due to time.Time.Equal
