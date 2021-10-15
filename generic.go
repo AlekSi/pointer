@@ -1,3 +1,6 @@
+//go:build go1.18
+// +build go1.18
+
 package pointer
 
 func To[T any](t T) *T {
@@ -5,7 +8,7 @@ func To[T any](t T) *T {
 }
 
 func ToOrNil[T comparable](t T) *T {
-	if z, ok := interface{}(t).(interface{ IsZero() bool }); ok {
+	if z, ok := any(t).(interface{ IsZero() bool }); ok {
 		if z.IsZero() {
 			return nil
 		}
