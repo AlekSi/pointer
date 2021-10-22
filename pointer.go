@@ -1,4 +1,4 @@
-// Package pointer provides helpers to get pointers to values of built-in types.
+// Package pointer provides helpers to convert between pointers and values of built-in (and, with generics, of any) types.
 package pointer // import "github.com/AlekSi/pointer"
 
 import (

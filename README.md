@@ -1,14 +1,15 @@
 # pointer
-[![GoDoc](https://godoc.org/github.com/AlekSi/pointer?status.svg)](https://godoc.org/github.com/AlekSi/pointer)
-[![Build Status](https://travis-ci.org/AlekSi/pointer.svg)](https://travis-ci.org/AlekSi/pointer)
 
-Go package pointer provides helpers to get pointers to values of built-in types.
+[![Go Reference](https://pkg.go.dev/badge/github.com/AlekSi/pointer.svg)](https://pkg.go.dev/github.com/AlekSi/pointer)
+
+Go package `pointer` provides helpers to convert between pointers and values of built-in
+(and, with Go 1.18+ generics, of any) types.
 
 ```
 go get github.com/AlekSi/pointer
 ```
 
-API is stable. [Documentation](http://godoc.org/github.com/AlekSi/pointer).
+API is stable. [Documentation](https://pkg.go.dev/github.com/AlekSi/pointer).
 
 ```go
 package motivationalexample
