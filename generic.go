@@ -34,3 +34,54 @@ func Get[T any](t *T) T {
 	}
 	return *t
 }
+
+// Deref returns the value from the passed pointer, or nil, if the passed non-nil pointer have a nil value.
+func Deref[T any](t *T) any {
+	if t == (*T)(nil) {
+		return nil
+	}
+	return *t
+}
+
+// GetValue returns the value from the passed pointer, or nil, if the passed non-nil pointer have a nil value.
+// Only supports builtin primitive types.
+func GetValue(t any) any {
+	var x any
+	switch v := t.(type) {
+	case *bool:
+		x = Deref(v)
+	case *byte:
+		x = Deref(v)
+	case *complex64:
+		x = Deref(v)
+	case *complex128:
+		x = Deref(v)
+	case *float32:
+		x = Deref(v)
+	case *float64:
+		x = Deref(v)
+	case *int:
+		x = Deref(v)
+	case *int8:
+		x = Deref(v)
+	case *int16:
+		x = Deref(v)
+	case *int32:
+		x = Deref(v)
+	case *int64:
+		x = Deref(v)
+	case *string:
+		x = Deref(v)
+	case *uint16:
+		x = Deref(v)
+	case *uint32:
+		x = Deref(v)
+	case *uint64:
+		x = Deref(v)
+	case *uintptr:
+		x = Deref(v)
+	default:
+		x = v
+	}
+	return x
+}

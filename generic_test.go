@@ -30,4 +30,13 @@ func TestGeneric(t *testing.T) {
 	if Get(&x) != x {
 		t.Errorf("Get(%v)", &x)
 	}
+	if Deref(&x) != x {
+		t.Errorf("Deref(%v)", &x)
+	}
+	if Deref((*time.Time)(nil)) != nil {
+		t.Errorf("Deref(%v)", nil)
+	}
+	if GetValue(To(x.Second())).(int) != 40 {
+		t.Errorf("GetValue(%v)", x.Second())
+	}
 }
